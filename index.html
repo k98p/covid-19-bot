@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Covid19 Test</title>
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+        <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    </head>
+    <body>
+        <!--Navbar-->
+        <ul class="nav nav-tabs bg-primary">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Covid19 General Assesment</a>
+            </li>
+            <li class="nav-item ml-auto">
+              <a class="nav-link" href="#" onClick="window.location.reload()">Exit</a>
+            </li>
+        </ul>
+        <!--Modal-->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h2 class="modal-title">Disclaimer</h2>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Hi! Our coronavirus disease self assessment scan has been developed on the basis of guidelines from the WHO and MHFW, Government of India. This interaction should not be taken as expert medical advice. Any information you share with us will be kept strictly confidential.
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        <!--Q&As-->
+        <div class="container" id="container1">
+            <h2>Q1. Please select your age </h2><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="less18" value="less18">Less than 18</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="18-40" value="18-40">18 - 40</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="30-60" value="30-60">30 - 60</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="60+" value="60+">60 + </button>
+        </div>
+        <div class="container anscontain" id="anscontainer1">
+
+        </div>
+
+        <div class="container" id="container2">
+            <h2>Q2. Please select your Gender </h2><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="male" value="male">Male</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="female" value="female">Female</button>
+        </div>
+        <div class="container anscontain" id="anscontainer2">
+            
+        </div>
+
+        <div class="container" id="container3">
+            <h2>Q3. What is your body temperature </h2><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="less98.2" value="less98.2">Less than 98.2 F</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="98.2-102" value="98.2-102">98.2 - 102 F</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="102+" value="102+">Greater than 102 F</button>
+        </div>
+        <div class="container anscontain" id="anscontainer3">
+            
+        </div>
+
+        <div class="container" id="container4">
+            <h2>Q4. Do you have any of the following symptops</h2><br />
+            <h5>A) Dry Cough B) High Fever C) Sore Throat D) Difficulty Breathing E) Weakness </h5><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="yes" value="yes">Yes</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="no" value="no">No</button>
+        </div>
+        <div class="container anscontain" id="anscontainer4">
+            
+        </div>
+
+        <div class="container" id="container5">
+            <h2>Q5. Pre Medical History (If any)</h2><br />
+            <h5>A) Diabetes B) High Blood Pressure C) Heart Disease D) Lungs Disease E) Stroke F) Asthma</h5><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="yes" value="yes">Yes</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="no" value="no">No</button>
+        </div>
+        <div class="container anscontain" id="anscontainer5">
+            
+        </div>
+
+
+        <div class="container" id="container6">
+            <h2>Q6. Improvement</h2><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="same" value="same">Same Condition</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="improvement" value="improvement">Improvement</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="worsened" value="worsened">Condition worsened</button>
+        </div>
+        <div class="container anscontain" id="anscontainer6">
+            
+        </div>
+
+
+        <div class="container" id="container7">
+            <h2>Q7. Are you in contact with a person or in an infected region</h2><br />
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="yes" value="yes">Yes</button>
+            <button type="button" class="btn btn-outline-info btn-lg btn-block myButton" id="no" value="no">No</button>
+        </div>
+        <div class="container anscontain" id="anscontainer7">
+            
+        </div>
+        <div class="container anscontain" id="container8">
+          <h2 id="result-div">
+          </h2>
+        </div>
+        <div class="container" id="anscontainer8">
+            
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
